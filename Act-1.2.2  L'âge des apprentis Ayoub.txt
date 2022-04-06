@@ -1,0 +1,26 @@
+Algorithme Age (T: tableau de type entiers): tableau
+variables	i,j,n,pos_max: entiers
+		T: tableau
+debut
+afficher("donner le nombre des collegues")
+sasir(n)
+pour i allant de 1 a n par pas de 1 faire
+	afficher("donner l'age du collegue No",i)
+	saisir(T[i])
+finpour
+pour i allant de 1 a n-1 par pas de 1 faire
+	pos_max=i
+	pour j de i+1 à n faire
+		si ( T[j] > T[pos_max]) alors
+		pos_max=j
+		finsi
+	finpour
+	si (pos_max != i) alors
+	permute(T[i],T[pos_max])
+	finsi
+finpour
+pour i allant de 1 a n par pas de 1 faire
+	afficher (T[i])
+finpour
+
+fin

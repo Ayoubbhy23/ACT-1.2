@@ -1,0 +1,54 @@
+Algorithme palindrome
+variables	M:tab
+		i,n: entiers
+debut
+afficher("donner le mot a verifier")
+saisir(M)
+i=0
+n=long(M)
+
+repeter
+	si M[i]==M[n-1]
+	i=i+1 n=n-1
+juqua i>=n ou M[i]!=M[n-1]
+
+si i>=n afficher("le mot est palindrome")
+sinon afficher("le mot n'est pas palindrome")
+
+fin
+-----------------------------------------------------------------------------
+
+Fonction Test(ref M:tableau[0..n] d'éléments;val n: entier):r :booleen;
+  var i :entier; 
+  début
+i=0
+n=long(M)
+repeter
+	si M[i]==M[n-1]
+	i=i+1 n=n-1
+juqua i>=n ou M[i]!=M[n-1]
+
+si	i>=n r=vrai
+	sinon r=faux
+finsi
+retourner(r);
+finfonction
+
+Algorithme palindrome
+variables	M:tab
+		i,n,r: entiers
+Fonction Test: booleen
+ 
+debut
+
+ afficher("donner le mot a verifier")
+ saisir(M)
+ i=0
+ n=long(M)
+ r=Test(M)
+
+ si r==vrai afficher("le mot est palindrome")
+  sinon afficher("le mot n'est pas palindrome")
+ finsi
+
+fin
